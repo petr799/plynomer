@@ -6,7 +6,7 @@
 
 -- Struktura tabulky `plynomer`
 
-CREATE TABLE IF NOT EXISTS `plynomer_new` (
+CREATE TABLE IF NOT EXISTS `plynomer` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id záznamu',
   `time` datetime NOT NULL COMMENT 'čas detekce sestupní hrany',
   PRIMARY KEY (`id`)
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `plynomer_new` (
 
 -- Struktura tabulky `plynomer_denni`
 
-CREATE TABLE IF NOT EXISTS `plynomer_denni_new` (
+CREATE TABLE IF NOT EXISTS `plynomer_denni` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
   `den` date NOT NULL COMMENT 'Určitý den',
   `spotreba_den` decimal(10,2) DEFAULT NULL COMMENT 'Součet spotřeby v tomto dni',
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `plynomer_denni_new` (
 
 -- Struktura tabulky `plynomer_hodinova`
 
-CREATE TABLE IF NOT EXISTS `plynomer_hodinova_new` (
+CREATE TABLE IF NOT EXISTS `plynomer_hodinova` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `spotreba` decimal(10,2) NOT NULL,
   `time` datetime NOT NULL,

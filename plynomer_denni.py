@@ -10,7 +10,7 @@ try:
 
 # secteme hodnoty ze sloupce spotreba za vcerejsi den
     vcerejsi_datum = date.today() - timedelta(1)
-    cursor.execute("SELECT SUM(spotreba) FROM `plynomer_hodinova` WHERE time >= %s - 1) AND time < CURDATE()",(vcerejsi_datum))
+    cursor.execute("SELECT SUM(spotreba) FROM `plynomer_hodinova` WHERE time >= %s AND time < CURDATE()",(vcerejsi_datum))
     spotreba_den = cursor.fetchone()
     cursor.execute("SELECT SUM(spotreba) FROM plynomer_hodinova")
     spotreba_celkem = cursor.fetchone()

@@ -14,7 +14,7 @@ try:
     spotreba_den = cursor.fetchone()
     cursor.execute("SELECT SUM(spotreba) FROM plynomer_hodinova")
     spotreba_celkem = cursor.fetchone()
-    cursor.execute("""INSERT INTO plynomer_denni den, spotreba_den, spotreba_celkem) VALUES (%s, %s, %s)""",(vcerejsi_datum, spotreba_den[0], spotreba_celkem[0]))
+    cursor.execute("""INSERT INTO plynomer_denni (den, spotreba_den, spotreba_celkem) VALUES (%s, %s, %s)""",(vcerejsi_datum, spotreba_den[0], spotreba_celkem[0]))
     con.commit()
     con.close()
 except:
